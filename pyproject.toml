@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=67", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "auckland-automation"
+version = "0.1.0"
+description = "Automation toolkit for Auckland Council CPU/CCC applications"
+authors = [{name = "Automation Developer"}]
+requires-python = ">=3.11"
+dependencies = [
+    "typer[all]>=0.9",
+    "pydantic>=2.5",
+    "rich>=13",
+    "playwright>=1.41",
+    "PyPDF2>=3.0",
+]
+
+[project.scripts]
+auckland-automation = "auckland_automation.cli:app"
